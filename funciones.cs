@@ -1,3 +1,4 @@
+using System.Text.Json;
 namespace funciones{
     public class personaje{
         private int velocidad; //1 a 10
@@ -48,4 +49,11 @@ namespace funciones{
             return DateTime.Now.Year-fecha.Year;
         }
     }
+    public class funcionesJson{
+        public void guardarPersonajes(List<personaje>Personajes,string archivo){
+            string json=JsonSerializer.Serialize(Personajes);
+            File.WriteAllText(archivo,json);
+        }
+    }
+    
 }
