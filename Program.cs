@@ -1,2 +1,3 @@
-﻿using personajes;
+﻿using funciones;
 
+personaje pj=new personaje;
