@@ -49,12 +49,6 @@ namespace funciones{
             return DateTime.Now.Year-fecha.Year;
         }
     }
-    public class funcionesJson{
-        public void guardarPersonajes(List<personaje>Personajes,string archivo){
-            string json=JsonSerializer.Serialize(Personajes);
-            File.WriteAllText(archivo,json);
-        }
-    }
     
     public class funcionesSecundarias{
         public void mostrarPersonajes(List<personaje>Personajes){
@@ -74,6 +68,37 @@ namespace funciones{
                 Console.WriteLine("Fuerza del Personaje: "+character.Fuerza);
                 aux++;
             }
+        }
+    }
+
+    public class funcionesJson{
+        public void guardarPersonajes(List<personaje>Personajes,string archivo){
+            string json=JsonSerializer.Serialize(Personajes);
+            File.WriteAllText(archivo,json);
+        }
+        public int leerPersonajes(string archivo){
+            int aux=1;
+            List<personaje> entidades=JsonSerializer.Deserialize<List<personaje>>(archivo);
+            if(entidades!=null){
+                foreach (personaje entidad in entidades){
+                    Console.WriteLine($"\n===Personaje {aux.ToString()}===");
+                    Console.WriteLine("Nombre del Personaje: "+character.Nombre);
+                    Console.WriteLine("Apodo del Personaje: "+character.Apodo);
+                    Console.WriteLine("Raza del Personaje: "+character.Tipo);
+                    Console.WriteLine("Edad del Personaje: "+character.Edad);
+                    Console.WriteLine("Fecha de Nacimiento del Personaje: "+character.Fechanac);
+                    Console.WriteLine("Nivel del Personaje: "+character.Nivel);
+                    Console.WriteLine("Armadura del Personaje: "+character.Armadura);
+                    Console.WriteLine("Salud del Personaje: "+character.Salud);
+                    Console.WriteLine("Velocidad del Personaje: "+character.Velocidad);
+                    Console.WriteLine("Destreza del Personaje: "+character.Destreza);
+                    Console.WriteLine("Fuerza del Personaje: "+character.Fuerza);
+                    aux++;
+                }
+            }
+        }
+        public int Existe(){
+
         }
     }
 }

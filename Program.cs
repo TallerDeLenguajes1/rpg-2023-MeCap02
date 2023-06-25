@@ -14,5 +14,6 @@ for (int i = 0; i < n; i++){
     Personajes.Add(pj);
 }
 
-Jason.guardarPersonajes(Personajes,"personajes.json");
 Secun.mostrarPersonajes(Personajes);
+Jason.guardarPersonajes(Personajes,"personajes.json");
+Jason.mostrarPersonajes("personajes.json");
