@@ -1,4 +1,5 @@
 ﻿using funciones;
+using jsonFunc;
 
 int n=4;
 
@@ -16,4 +17,4 @@ for (int i = 0; i < n; i++){
 
 Secun.mostrarPersonajes(Personajes);
 Jason.guardarPersonajes(Personajes,"personajes.json");
-Jason.mostrarPersonajes("personajes.json");
+Jason.leerPersonajes("personajes.json");
