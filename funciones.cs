@@ -37,10 +37,10 @@ namespace funciones{
             pj.Nivel=Aleatorio.Next(1,11);
             pj.Armadura=Aleatorio.Next(1,11);
             pj.Salud=100;
-            pj.Tipo=raza[Aleatorio.Next(1,6)];
-            pj.Nombre=nombres[Aleatorio.Next(1,6)];
-            pj.Apodo=apodos[Aleatorio.Next(1,6)];
-            pj.Fechanac=new DateTime(Aleatorio.Next(1,31),Aleatorio.Next(1,13),Aleatorio.Next(1723,2024));
+            pj.Tipo=raza[Aleatorio.Next(0,5)];
+            pj.Nombre=nombres[Aleatorio.Next(0,5)];
+            pj.Apodo=apodos[Aleatorio.Next(0,5)];
+            pj.Fechanac=new DateTime(Aleatorio.Next(1723,2024),Aleatorio.Next(1,13),Aleatorio.Next(1,31));
             pj.Edad=definirEdad(pj.Fechanac);
             return pj;
         }

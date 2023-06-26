@@ -29,17 +29,17 @@ namespace jsonFunc{
                 }
             }
         }
-        public int Existe(string archivo){
+        public bool Existe(string archivo){
             string aux;
             if(File.Exists(archivo)){
                 aux=File.ReadAllText(archivo);
-                if(aux!=null){
-                    return 1;
+                if(aux==null){
+                    return false;
                 }else{
-                    return 0;
+                    return true;
                 }
             }else{
-                return 0;
+                return false;
             }
         }
     }
