@@ -10,7 +10,8 @@ namespace jsonFunc{
         }
         public void leerPersonajes(string archivo){
             int aux=1;
-            List<personaje>? entidades=JsonSerializer.Deserialize<List<personaje>>(archivo);
+            string jsonString=File.ReadAllText(archivo);
+            List<personaje>? entidades=JsonSerializer.Deserialize<List<personaje>>(jsonString)!;
             if(entidades!=null){
                 foreach (personaje entidad in entidades){
                     Console.WriteLine($"\n===Personaje {aux.ToString()}===");
