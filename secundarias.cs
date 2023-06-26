@@ -2,9 +2,8 @@ using funciones;
 
 namespace secundarias{
     public class funcionesSecundarias{
-        public void mostrarPersonajes(List<personaje>Personajes){
+        public void mostrarPersonajes(personaje character){
             int aux=1;
-            foreach (personaje character in Personajes){
                 Console.WriteLine($"\n===Personaje {aux.ToString()}===");
                 Console.WriteLine("Nombre del Personaje: "+character.Nombre);
                 Console.WriteLine("Apodo del Personaje: "+character.Apodo);
@@ -18,7 +17,6 @@ namespace secundarias{
                 Console.WriteLine("Destreza del Personaje: "+character.Destreza);
                 Console.WriteLine("Fuerza del Personaje: "+character.Fuerza);
                 aux++;
-            }
         }
 
         public int calcularDanio(int Des,int Fue,int Lvl,int Armd,int Vel,int Sal){
