@@ -28,6 +28,7 @@ namespace secundarias{
             int Efec=Aleatorio.Next(1,101);
             int Def=Armd*Vel; //del defensor
             int danioProvocado=((Danio*Efec)-Def)/ajuste;
+            Console.WriteLine($"-Se provoca {danioProvocado.ToString()} puntos de danio");
             Sal=Sal-danioProvocado; //Salud del defensor
             return Sal;
         }

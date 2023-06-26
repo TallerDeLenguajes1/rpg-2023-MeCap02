@@ -77,16 +77,16 @@ aux5=dado.Next(1,3);
 
 do{
     Console.WriteLine($"===Turno {aux4.ToString()}===");
-    Console.WriteLine("\n-Empieza el personaje...");
+    //Console.WriteLine("\n-Empieza el personaje...");
     if(aux5==1){
         Console.WriteLine("-Empieza el personaje 1");
         vida[1]=Secun.calcularDanio(destreza[0],fuerza[0],nivel[0],armadura[1],velocidad[1],vida[1]);
-        Console.WriteLine($"-Personaje 2 perdio {vida[1].ToString()} puntos de salud\n");
+        Console.WriteLine($"-Le quedan {vida[0].ToString()} puntos de salud al Personaje 2\n");
         aux5=0;
     }else{
         Console.WriteLine("-Empieza el personaje 2");
         vida[0]=Secun.calcularDanio(destreza[1],fuerza[1],nivel[1],armadura[0],velocidad[0],vida[0]);
-        Console.WriteLine($"-Personaje 2 perdio {vida[0].ToString()} puntos de salud\n");
+        Console.WriteLine($"-Le quedan {vida[0].ToString()} puntos de salud al Personaje 1\n");
         aux5=1;
     }
     aux4++;
