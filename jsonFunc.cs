@@ -30,6 +30,21 @@ namespace jsonFunc{
                 }
             }
         }
+
+        public personaje elegirPersonajes(string archivo){
+            int aux1=0;
+            string jsonString=File.ReadAllText(archivo);
+            List<personaje>? entidades=JsonSerializer.Deserialize<List<personaje>>(jsonString);
+            personaje pjApartado=new personaje();
+            Random Aleatorio=new Random();
+            foreach (personaje entidad in entidades){
+                int aux2=Aleatorio.Next(0,3);
+                if(aux2==2 && aux1!=1){
+                    pjApartado=entidad;
+                }
+            }
+            return pjApartado;
+        }
         public bool Existe(string archivo){
             string aux;
             if(File.Exists(archivo)){
