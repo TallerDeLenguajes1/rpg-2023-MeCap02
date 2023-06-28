@@ -1,5 +1,6 @@
 namespace funciones{
     public class personaje{
+        private int idpj; //1 a 10
         private int velocidad; //1 a 10
         private int destreza; // 1 a 5
         private int fuerza; // 1 a 10
@@ -12,6 +13,7 @@ namespace funciones{
         private DateTime fechaNac;
         private int edad; //0 a 300
 
+        public int IDPj{get=>idpj;set=>idpj=value;}
         public int Velocidad{get=>velocidad;set=>velocidad=value;}
         public int Destreza{get=>destreza;set=>destreza=value;}
         public int Fuerza{get=>fuerza;set=>fuerza=value;}
@@ -25,12 +27,13 @@ namespace funciones{
         public int Edad{get=>edad;set=>edad=value;}
     }
     public class fabricaDePersonajes{
-        public personaje GeneraPersonajes(){
+        public personaje GeneraPersonajes(int i){
             personaje pj =new personaje();
             Random Aleatorio=new Random();
             string[] raza={"Humano","Elfo","Enano","Ogro","Demonio"};
             string[] nombres={"Jose","Hector","Pedro","Ricardo","Mauro"};
             string[] apodos={"El Borracho","El Lider","El Loco","El Amable","El Criminal"};
+            pj.IDPj=i;
             pj.Velocidad=Aleatorio.Next(1,11);
             pj.Destreza=Aleatorio.Next(1,6);
             pj.Fuerza=Aleatorio.Next(1,11);
