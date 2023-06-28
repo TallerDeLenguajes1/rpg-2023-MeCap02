@@ -124,6 +124,8 @@ for (int i = 0; i < 8; i++){
     newAux2=1;
 }
 
+//Implementar mensaje de victoria, fin de juego
+
 /*Salud,Armadura,Nivel,Fuerza,Destreza,Velocidad
     int[] destreza=new int[2]; //manda del atacante
     int[] fuerza=new int[2]; //manda del atacante
