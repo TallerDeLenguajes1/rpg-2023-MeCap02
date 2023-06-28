@@ -107,21 +107,33 @@ for (int i = 0; i < 8; i++){
         if(estadisticas[0,5]<=0){
             Console.WriteLine("\n-Personaje 1 se ha quedado sin salud, gana el Personaje 2");
             Console.WriteLine("-Recompensa por haber ganado: +10 Salud, +5 Defensa\n");
-            estadisticas[1,5]=estadisticas[0,5]+10;
-            estadisticas[1,3]=estadisticas[0,3]+5;
-            aux9=1;
+            estadisticas[1,5]=estadisticas[1,5]+10;
+            estadisticas[1,3]=estadisticas[1,3]+5;
+            aux9=0;
             break;
         }
         if(estadisticas[1,5]<=0){
             Console.WriteLine("\n-Personaje 2 se ha quedado sin salud, gana el Personaje 1");
             Console.WriteLine("-Recompensa por haber ganado: +10 Salud, +5 Defensa");
-            estadisticas[0,5]=estadisticas[1,5]+10;
-            estadisticas[0,3]=estadisticas[1,3]+5;
-            aux9=0;
+            estadisticas[0,5]=estadisticas[0,5]+10;
+            estadisticas[0,3]=estadisticas[0,3]+5;
+            aux9=1;
             break;
         }
     } while(aux6!=10);
     newAux2=1;
+}
+
+Console.WriteLine("\n===Fin del Juego===");
+switch (aux9){
+    case 0:
+        Secun.mostrarGanador(idSaverPC[1],estadisticas,1);
+        break;
+    case 1:
+        Secun.mostrarGanador(idSaverPC[0],estadisticas,0);
+        break;
+    default:
+        break;
 }
 
 //Implementar mensaje de victoria, fin de juego

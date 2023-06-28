@@ -15,18 +15,18 @@ namespace jsonFunc{
                 foreach (personaje entidad in entidades){
                     if(idSaved==entidad.IDPj){
                         Console.WriteLine($"\n===Personaje Elegido {(entidad.IDPj).ToString()}===");
-                        Console.WriteLine("ID del Personaje: "+entidad.IDPj);
-                        Console.WriteLine("Nombre del Personaje: "+entidad.Nombre);
-                        Console.WriteLine("Apodo del Personaje: "+entidad.Apodo);
-                        Console.WriteLine("Raza del Personaje: "+entidad.Tipo);
-                        Console.WriteLine("Edad del Personaje: "+entidad.Edad);
-                        Console.WriteLine("Fecha de Nacimiento del Personaje: "+entidad.Fechanac);
-                        Console.WriteLine("Nivel del Personaje: "+entidad.Nivel);
-                        Console.WriteLine("Armadura del Personaje: "+entidad.Armadura);
-                        Console.WriteLine("Salud del Personaje: "+entidad.Salud);
-                        Console.WriteLine("Velocidad del Personaje: "+entidad.Velocidad);
-                        Console.WriteLine("Destreza del Personaje: "+entidad.Destreza);
-                        Console.WriteLine("Fuerza del Personaje: "+entidad.Fuerza);
+                        Console.WriteLine("-ID del Personaje: "+entidad.IDPj);
+                        Console.WriteLine("-Nombre del Personaje: "+entidad.Nombre);
+                        Console.WriteLine("-Apodo del Personaje: "+entidad.Apodo);
+                        Console.WriteLine("-Raza del Personaje: "+entidad.Tipo);
+                        Console.WriteLine("-Edad del Personaje: "+entidad.Edad);
+                        Console.WriteLine("-Fecha de Nacimiento del Personaje: "+entidad.Fechanac);
+                        Console.WriteLine("-Nivel del Personaje: "+entidad.Nivel);
+                        Console.WriteLine("-Armadura del Personaje: "+entidad.Armadura);
+                        Console.WriteLine("-Salud del Personaje: "+entidad.Salud);
+                        Console.WriteLine("-Velocidad del Personaje: "+entidad.Velocidad);
+                        Console.WriteLine("-Destreza del Personaje: "+entidad.Destreza);
+                        Console.WriteLine("-Fuerza del Personaje: "+entidad.Fuerza);
                     }
                 }
             }
